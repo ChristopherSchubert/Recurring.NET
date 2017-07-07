@@ -5,9 +5,9 @@ namespace Recurring.NET.Model.Recurring
 	/// <summary>
 	/// Weekly frequency interval.
 	/// </summary>
+	[Flags]
 	public enum WeeklyFrequencyInterval
 	{
-		Unused = 0,
 		Sunday = 1,
 		Monday = 2,
 		Tuesday = 4,

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{44652E3B-10D1-4C27-8403-FBB320B33032}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Recurring.NET</RootNamespace>
+    <AssemblyName>Recurring.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Schedule.cs" />
+    <Compile Include="Model\Dates\Date.cs" />
+    <Compile Include="Model\Dates\Time.cs" />
+    <Compile Include="Model\Recurring\FrequencyType.cs" />
+    <Compile Include="Model\Recurring\MonthlyRelativeFrequencyInterval.cs" />
+    <Compile Include="Model\Recurring\WeeklyFrequencyInterval.cs" />
+    <Compile Include="Utilities\ScheduleDescriptor.cs" />
+    <Compile Include="Exceptions\InvalidScheduleConfigurationException.cs" />
+    <Compile Include="Model\Dates\Month.cs" />
+    <Compile Include="Utilities\ScheduleCreator.cs" />
+    <Compile Include="Model\Recurring\SubdayFrequencyType.cs" />
+    <Compile Include="Model\Recurring\MonthlyRelativeOrdinality.cs" />
+    <Compile Include="Model\ScheduleModel.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\DailyScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\MonthlyRelativeScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\MonthlyScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\OneTimeScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\WeeklyScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\ScheduleType\Base\SpecificScheduleParameters.cs" />
+    <Compile Include="Model\Parameters\SubdayParameters.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Model\Parameters\ScheduleType\" />
+    <Folder Include="Model\Parameters\ScheduleType\Base\" />
+  </ItemGroup>
+</Project>

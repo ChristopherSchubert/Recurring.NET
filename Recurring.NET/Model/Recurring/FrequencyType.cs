@@ -14,23 +14,23 @@ namespace Recurring.NET.Model.Recurring
 		/// <summary>
 		/// Daily.
 		/// </summary>
-		Daily = 4,
+		Daily = 2,
 		/// <summary>
 		/// Weekly.
 		/// </summary>
-		Weekly = 8,
+		Weekly = 3,
 		/// <summary>
 		/// Monthly.
 		/// </summary>
-		Monthly = 16,
+		Monthly = 4,
 		/// <summary>
-		/// Monthly, relative to a <see cref="Recurring.NET.Model.Schedule"/>'s <see cref="FrequencyInterval"/> value.
+		/// Monthly, relative to a frequency interval value.
 		/// </summary>
-		MonthlyRelative = 32,
+		MonthlyRelative = 5,
 		/// <summary>
 		/// Immediately upon being evaluated.
 		/// </summary>
-		Immediate = 64
+		Immediate = 6
 	}
 }
 

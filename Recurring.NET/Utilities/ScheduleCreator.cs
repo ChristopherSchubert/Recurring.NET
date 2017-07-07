@@ -1,13 +1,14 @@
 ﻿using System;
+using Recurring.NET.Model.Parameters;
+using Recurring.NET.Model.Dates;
 using Recurring.NET.Model;
 
 namespace Recurring.NET.Utilities
 {
-	public static class ScheduleCreator
+	public sealed class ScheduleCreator
 	{
-		public static Schedule CreateSchedule()
-		{
-			return default(Schedule);
-		}
+		
+
 	}
 }
+

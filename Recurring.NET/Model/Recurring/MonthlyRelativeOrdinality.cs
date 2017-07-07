@@ -3,14 +3,11 @@
 namespace Recurring.NET.Model.Recurring
 {
 	/// <summary>
-	/// When the a schedule should recur in each month, if the <seealso cref="Recurring.NET.Model.Recurring.FrequencyType"/> is <c>FrequencyType.MonthlyRelative</c>
+	/// When a monthly relative schedule should recur in each month.
 	/// </summary>
-	public enum FrequencyRelativeInterval
+	[Flags]
+	public enum MonthlyRelativeOrdinality
 	{
-		/// <summary>
-		/// The frequency relative interval is not used.
-		/// </summary>
-		Unused = 0,
 		/// <summary>
 		/// The first occurrence of the month.
 		/// </summary>

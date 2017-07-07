@@ -7,7 +7,6 @@ namespace Recurring.NET.Model.Recurring
 	/// </summary>
 	public enum MonthlyRelativeFrequencyInterval
 	{
-		Unused = 0,
 		Sunday = 1,
 		Monday = 2,
 		Tuesday = 3,
