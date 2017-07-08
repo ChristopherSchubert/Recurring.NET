@@ -7,8 +7,6 @@ namespace Recurring.NET.Utilities
 {
 	public sealed class ScheduleCreator
 	{
-		
-
 	}
 }
 

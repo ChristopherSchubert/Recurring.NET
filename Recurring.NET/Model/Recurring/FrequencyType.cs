@@ -26,11 +26,7 @@ namespace Recurring.NET.Model.Recurring
 		/// <summary>
 		/// Monthly, relative to a frequency interval value.
 		/// </summary>
-		MonthlyRelative = 5,
-		/// <summary>
-		/// Immediately upon being evaluated.
-		/// </summary>
-		Immediate = 6
+		MonthlyRelative = 5
 	}
 }
 

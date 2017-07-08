@@ -12,11 +12,11 @@ namespace Recurring.NET.Model
 
 		public int FrequencyType { get; set; }
 
-		public int? FrequencyInterval { get; set; }
+		public int? Interval { get; set; }
 
 		public int? SubdayFrequencyType { get; set; }
 
-		public int SubdayOccursEvery { get; set; }
+		public int SubdayInterval { get; set; }
 
 		public int? RelativeInterval { get; set; }
 
@@ -29,5 +29,7 @@ namespace Recurring.NET.Model
 		public int ActiveTimeStartSeconds { get; set; }
 
 		public int ActiveTimeEndSeconds { get; set; }
+
+		public string ScheduleDescription { get; set; }
 	}
 }

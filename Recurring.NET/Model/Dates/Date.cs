@@ -4,6 +4,8 @@ namespace Recurring.NET.Model.Dates
 {
 	public struct Date
 	{
+		#region Constructors
+
 		public Date(int year, int month, int day)
 		{
 			_internalDateTime = new DateTime(year, month, day);
@@ -14,13 +16,25 @@ namespace Recurring.NET.Model.Dates
 			_internalDateTime = new DateTime(year, (int)month, day);
 		}
 
+		#endregion
+
+		#region Private Fields
+
 		private DateTime _internalDateTime;
+
+		#endregion
+
+		#region Public Properties
 
 		public int Year { get { return _internalDateTime.Year; } }
 
 		public Month Month { get { return (Month)_internalDateTime.Month; } }
 
 		public int Day { get { return _internalDateTime.Day; } }
+
+		#endregion
+
+		#region Public Methods
 
 		public void SetYear(int year)
 		{
@@ -71,6 +85,8 @@ namespace Recurring.NET.Model.Dates
 		{
 			_internalDateTime.AddDays(-days);
 		}
+
+		#endregion
 	}
 }
 

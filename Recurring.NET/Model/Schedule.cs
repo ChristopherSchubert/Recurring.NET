@@ -30,8 +30,8 @@ namespace Recurring.NET.Model
 		/// If the <see cref="FrequencyType"/> is <c>FrequencyType.MonthlyRelative</c>, this value maps to <see cref="MonthlyRelativeInterval"/>.
 		/// If the <see cref="FrequencyType"/> is <c>FrequencyType.Immediate</c>, this value is unused.
 		/// </summary>
-		/// <value>The frequency internval.</value>
-		public int? OccursEvery { get; private set; }
+		/// <value>The frequency interval.</value>
+		public int? Interval { get; private set; }
 
 		/// <summary>
 		/// Gets or sets how frequently an event would occur for this schedule.
@@ -58,7 +58,7 @@ namespace Recurring.NET.Model
 					return null;
 				} 
 
-				return (MonthlyRelativeFrequencyInterval)OccursEvery;
+				return (MonthlyRelativeFrequencyInterval)Interval;
 			}
 		}
 
@@ -69,7 +69,7 @@ namespace Recurring.NET.Model
 		public int? RecurrenceFactor { get; private set; }
 
 		/// <summary>
-		/// Gets or sets when the <see cref="FrequencyInterval"/> occurs in each month, if the <see cref="FrequencyType"/> is <c>FrequencyType.MonthlyRelative</c>.
+		/// Gets or sets when the <see cref="Interval"/> occurs in each month, if the <see cref="FrequencyType"/> is <c>FrequencyType.MonthlyRelative</c>.
 		/// </summary>
 		/// <value>The relative interval.</value>
 		public MonthlyRelativeOrdinality? MonthlyRelativeOrdinality { get; private set; }
@@ -90,7 +90,7 @@ namespace Recurring.NET.Model
 		/// Gets or sets the name of the schedule.
 		/// </summary>
 		/// <value>The name of the schedule.</value>
-		public string ScheduleName{ get; set; }
+		public string ScheduleName { get; set; }
 
 		/// <summary>
 		/// Gets or sets the date that the schedule will start.  No occurrences will be registered before this date.  Inclusive.
@@ -102,7 +102,7 @@ namespace Recurring.NET.Model
 		/// Gets or sets the type of the subday recurrence.
 		/// </summary>
 		/// <value>The type of the subday.</value>
-		public SubdayFrequencyType? SubdayFrequencyType{ get; private set; }
+		public SubdayFrequencyType? SubdayFrequencyType { get; private set; }
 
 		/// <summary>
 		/// Gets or sets the subday interval, which represents the number of <see cref="SubdayFrequencyType"/> periods to occur between each recurrence.
@@ -123,7 +123,7 @@ namespace Recurring.NET.Model
 					return null;
 				} 
 
-				return (WeeklyFrequencyInterval)OccursEvery;
+				return (WeeklyFrequencyInterval)Interval;
 			}
 		}
 	}

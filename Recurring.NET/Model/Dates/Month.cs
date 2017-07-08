@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Recurring.NET.Model.Dates
+﻿namespace Recurring.NET.Model.Dates
 {
 	public enum Month
 	{

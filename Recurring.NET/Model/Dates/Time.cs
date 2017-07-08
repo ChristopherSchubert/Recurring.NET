@@ -4,6 +4,8 @@ namespace Recurring.NET.Model.Dates
 {
 	public struct Time
 	{
+		#region Constructors
+
 		public Time(int hour, int minute, int second, int millisecond = 0)
 		{
 			_internalDateTime = new DateTime(2000, 1, 1, hour, minute, second);
@@ -14,7 +16,15 @@ namespace Recurring.NET.Model.Dates
 			}
 		}
 
+		#endregion
+
+		#region Private Fields
+
 		private DateTime _internalDateTime;
+
+		#endregion
+
+		#region Public Properties
 
 		public int Hour { get { return _internalDateTime.Hour; } }
 
@@ -23,6 +33,10 @@ namespace Recurring.NET.Model.Dates
 		public int Second { get { return _internalDateTime.Second; } }
 
 		public int Millisecond { get { return _internalDateTime.Millisecond; } }
+
+		#endregion
+
+		#region Public Methods
 
 		public void SetHour(int hour)
 		{
@@ -84,6 +98,8 @@ namespace Recurring.NET.Model.Dates
 		{
 			_internalDateTime.AddMilliseconds(-milliseconds);
 		}
+
+		#endregion
 	}
 }
 

@@ -10,7 +10,7 @@ namespace Recurring.NET.Model.Parameters.ScheduleType
 		protected OneTimeScheduleParameters(string scheduleName, Date occurrenceDate, Time occurrenceTime, Guid? scheduleId = null, bool isEnabled = true)
 		{
 			ActiveTimeStart = occurrenceTime;
-			Frequency = FrequencyType.Daily;
+			Frequency = FrequencyType.OneTimeOnly;
 			IsEnabled = isEnabled;
 			ScheduleId = scheduleId ?? Guid.NewGuid();
 			ScheduleName = scheduleName;

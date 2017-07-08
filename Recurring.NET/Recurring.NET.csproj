@@ -54,10 +54,12 @@
     <Compile Include="Model\Parameters\ScheduleType\WeeklyScheduleParameters.cs" />
     <Compile Include="Model\Parameters\ScheduleType\Base\SpecificScheduleParameters.cs" />
     <Compile Include="Model\Parameters\SubdayParameters.cs" />
+    <Compile Include="Model\Dates\Formatting\DateFormat.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Model\Parameters\ScheduleType\" />
     <Folder Include="Model\Parameters\ScheduleType\Base\" />
+    <Folder Include="Model\Dates\Formatting\" />
   </ItemGroup>
 </Project>
