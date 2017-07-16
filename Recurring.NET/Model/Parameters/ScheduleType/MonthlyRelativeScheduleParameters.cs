@@ -7,7 +7,15 @@ namespace Recurring.NET.Model.Parameters.ScheduleType
 {
 	public class MonthlyRelativeScheduleParameters : SpecificScheduleParameters
 	{
-		public MonthlyRelativeScheduleParameters(string scheduleName, MonthlyRelativeOrdinality ordinality, MonthlyRelativeFrequencyInterval frequency, int occursEveryMonths, Time occurrenceTime, Date startDate, Date? endDate = null, Guid? scheduleId = null, bool isEnabled = true)
+		public MonthlyRelativeScheduleParameters(string scheduleName,
+		                                         MonthlyRelativeOrdinality ordinality,
+		                                         MonthlyRelativeFrequencyInterval frequency,
+		                                         int occursEveryMonths,
+		                                         Time occurrenceTime,
+		                                         Date startDate,
+		                                         Date endDate = null,
+		                                         Guid? scheduleId = null,
+		                                         bool isEnabled = true)
 		{
 			ActiveTimeStart = occurrenceTime;
 			Frequency = FrequencyType.Daily;
@@ -21,7 +29,15 @@ namespace Recurring.NET.Model.Parameters.ScheduleType
 			ScheduleStart = startDate;
 		}
 
-		public MonthlyRelativeScheduleParameters(string scheduleName, MonthlyRelativeOrdinality ordinality, MonthlyRelativeFrequencyInterval frequency, int occursEveryMonths, SubdayParameters subdayParameters, Date startDate, Date? endDate = null, Guid? scheduleId = null, bool isEnabled = true)
+		public MonthlyRelativeScheduleParameters(string scheduleName,
+		                                         MonthlyRelativeOrdinality ordinality,
+		                                         MonthlyRelativeFrequencyInterval frequency,
+		                                         int occursEveryMonths,
+		                                         SubdayParameters subdayParameters,
+		                                         Date startDate,
+		                                         Date endDate = null,
+		                                         Guid? scheduleId = null,
+		                                         bool isEnabled = true)
 		{
 			ActiveTimeStart = subdayParameters.StartingAt;
 			ActiveTimeEnd = subdayParameters.EndingAt;

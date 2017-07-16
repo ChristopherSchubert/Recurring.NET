@@ -55,6 +55,8 @@
     <Compile Include="Model\Parameters\ScheduleType\Base\SpecificScheduleParameters.cs" />
     <Compile Include="Model\Parameters\SubdayParameters.cs" />
     <Compile Include="Model\Dates\Formatting\DateFormat.cs" />
+    <Compile Include="Model\Dates\Formatting\TimeFormat.cs" />
+    <Compile Include="Utilities\DateFormatter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace Recurring.NET.Model
 		/// Gets the time on any day between <see cref="ScheduleStart"/> and <see cref="ScheduleEnd"/> that the schedule ceases being eligible for execution.
 		/// </summary>
 		/// <value>The active time end.</value>
-		public Time? ActiveTimeEnd { get; private set; }
+		public Time ActiveTimeEnd { get; private set; }
 
 		/// <summary>
 		/// Gets the time on any day between <see cref="ScheduleStart"/> and <see cref="ScheduleEnd"/> that the schedule becomes eligible for execution.
@@ -78,7 +78,7 @@ namespace Recurring.NET.Model
 		/// Gets or sets the date that the schedule will end.  No occurrences will be registered after this date.  Inclusive.
 		/// </summary>
 		/// <value>The schedule end.</value>
-		public Date? ScheduleEnd { get; private set; }
+		public Date ScheduleEnd { get; private set; }
 
 		/// <summary>
 		/// Gets the schedule identifier.

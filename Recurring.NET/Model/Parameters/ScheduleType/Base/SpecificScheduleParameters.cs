@@ -6,7 +6,7 @@ namespace Recurring.NET.Model.Parameters.ScheduleType.Base
 {
 	public abstract class SpecificScheduleParameters
 	{
-		public Time? ActiveTimeEnd { get; protected set; }
+		public Time ActiveTimeEnd { get; protected set; }
 
 		public Time ActiveTimeStart { get; protected set; }
 
@@ -20,7 +20,7 @@ namespace Recurring.NET.Model.Parameters.ScheduleType.Base
 
 		public int? RecurrenceFactor { get; protected set; }
 
-		public Date? ScheduleEnd { get; protected set; }
+		public Date ScheduleEnd { get; protected set; }
 
 		public Guid ScheduleId { get; set; }
 

@@ -5,7 +5,10 @@ namespace Recurring.NET.Model.Parameters
 {
 	public class SubdayParameters
 	{
-		public SubdayParameters(int occursEvery, SubdayFrequencyType subdayFrequencyType, Time? startingAt = null, Time? endingAt = null)
+		public SubdayParameters(int occursEvery,
+		                        SubdayFrequencyType subdayFrequencyType,
+		                        Time startingAt = null,
+		                        Time endingAt = null)
 		{
 			EndingAt = endingAt ?? new Time(23, 59, 59, 999);
 			FrequencyType = subdayFrequencyType;

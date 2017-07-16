@@ -2,7 +2,7 @@
 
 namespace Recurring.NET.Model.Dates
 {
-	public struct Date
+	public class Date : IEquatable<Date>
 	{
 		#region Constructors
 
@@ -85,6 +85,42 @@ namespace Recurring.NET.Model.Dates
 		{
 			_internalDateTime.AddDays(-days);
 		}
+
+
+		#region IEquatable
+
+		public override bool Equals(object obj)
+		{
+			return Equals(obj as Date);
+		}
+
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+
+		public bool Equals(Date other)
+		{
+			if ((object)other == null)
+			{
+				return false;
+			}
+			return _internalDateTime.Year == other.Year
+			&& _internalDateTime.Month == (int)other.Month
+			&& _internalDateTime.Day == other.Day;
+		}
+
+		public static bool operator ==(Date left, Date right)
+		{
+			return object.Equals(left, right);
+		}
+
+		public static bool operator !=(Date left, Date right)
+		{
+			return !(left == right);
+		}
+
+		#endregion
 
 		#endregion
 	}

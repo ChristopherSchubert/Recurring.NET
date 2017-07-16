@@ -7,7 +7,14 @@ namespace Recurring.NET.Model.Parameters.ScheduleType
 {
 	public class MonthlyScheduleParameters : SpecificScheduleParameters
 	{
-		public MonthlyScheduleParameters(string scheduleName, int dayOfMonth, int occursEveryMonths, Time occurrenceTime, Date startDate, Date? endDate = null, Guid? scheduleId = null, bool isEnabled = true)
+		public MonthlyScheduleParameters(string scheduleName,
+		                                 int dayOfMonth,
+		                                 int occursEveryMonths,
+		                                 Time occurrenceTime,
+		                                 Date startDate,
+		                                 Date endDate = null,
+		                                 Guid? scheduleId = null,
+		                                 bool isEnabled = true)
 		{
 			ActiveTimeStart = occurrenceTime;
 			Frequency = FrequencyType.Daily;
@@ -20,7 +27,14 @@ namespace Recurring.NET.Model.Parameters.ScheduleType
 			ScheduleStart = startDate;
 		}
 
-		public MonthlyScheduleParameters(string scheduleName, int dayOfMonth, int occursEveryMonths, SubdayParameters subdayParameters, Date startDate, Date? endDate = null, Guid? scheduleId = null, bool isEnabled = true)
+		public MonthlyScheduleParameters(string scheduleName,
+		                                 int dayOfMonth,
+		                                 int occursEveryMonths,
+		                                 SubdayParameters subdayParameters,
+		                                 Date startDate,
+		                                 Date endDate = null,
+		                                 Guid? scheduleId = null,
+		                                 bool isEnabled = true)
 		{
 			ActiveTimeStart = subdayParameters.StartingAt;
 			ActiveTimeEnd = subdayParameters.EndingAt;

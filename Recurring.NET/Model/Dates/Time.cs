@@ -2,7 +2,7 @@
 
 namespace Recurring.NET.Model.Dates
 {
-	public struct Time
+	public class Time : IEquatable<Time>
 	{
 		#region Constructors
 
@@ -99,7 +99,42 @@ namespace Recurring.NET.Model.Dates
 			_internalDateTime.AddMilliseconds(-milliseconds);
 		}
 
+		#region IEquatable
+
+		public override bool Equals(object obj)
+		{
+			return Equals(obj as Time);
+		}
+
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+
+		public bool Equals(Time other)
+		{
+			if ((object)other == null)
+			{
+				return false;
+			}
+			return _internalDateTime.Hour == other.Hour
+			&& _internalDateTime.Minute == other.Minute
+			&& _internalDateTime.Second == other.Second
+			&& _internalDateTime.Millisecond == other.Millisecond;
+		}
+
+		public static bool operator ==(Time left, Time right)
+		{
+			return object.Equals(left, right);
+		}
+
+		public static bool operator !=(Time left, Time right)
+		{
+			return !(left == right);
+		}
+
+		#endregion
+
 		#endregion
 	}
 }
-
